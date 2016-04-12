@@ -1,54 +1,63 @@
-        @font-face {
-            font-family: 'Helvetica Neue UltraLight';
-            src: url('../fonts/HelveticaNeue-UltraLight.eot');
-            src: local('☺'), url('../fonts/HelveticaNeue-UltraLight.woff') format('woff'), url('../fonts/HelveticaNeue-UltraLight.ttf') format('truetype'), url('../fonts/HelveticaNeue-UltraLight.svg') format('svg');
-            font-weight: normal;
-            font-style: normal;
+/**********************
+    GENERAL STYLES
+**********************/
+
+@font-face {
+    font-family: 'Helvetica Neue UltraLight';
+        src: url('../fonts/HelveticaNeue-UltraLight.eot');
+        src: local('☺'), url('../fonts/HelveticaNeue-UltraLight.woff') format('woff'), url('../fonts/HelveticaNeue-UltraLight.ttf') format('truetype'), url('../fonts/HelveticaNeue-UltraLight.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
         }
         
-        body {
-            background-color: #fff;
-        }
+body {
+    font-size: 16px;
+    background-color: #fff;
+}
         
-        .page-section {
-            text-align: center;
-        }
+.page-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
         
-        h2 {
-            margin-bottom: 1.2rem;
-            font-family: 'Dancing Script', cursive;
-            font-size: 2em;
-            font-weight: 400;
-        }
+h2 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2em;
+    font-weight: 400;
+}
         
-        h2:before,
-        h2:after {
-            vertical-align: 10%;
-            height: 2px;
-            max-width: 5px;
-            content: '~';
-        }
+h2:before,
+h2:after {
+    vertical-align: 10%;
+    height: 2px;
+    max-width: 5px;
+    content: '~';
+}
         
-        h2:before {
-            margin-right: .7rem;
-        }
+h2:before {
+    margin-right: .7rem;
+}
         
-        h2:after {
-            margin-left: .7rem;
-            -webkit-transform: rotate(300deg);
-            transform: rotate(30deg);
-        }
+h2:after {
+    margin-left: .7rem;
+}
+
+
+/**********************
+    NAVBAR
+**********************/
         
-        nav.navbar {
-            margin-bottom: 0;
-            height: auto;
-            width: 100%;
-            z-index: 9;
-            background-color: rgba(255, 255, 226);
-            -webkit-transition: background 1s ease;
-            transition: background 1s ease;
-        }
-        /* rgba(113,101,88,.9) */
+nav.navbar {
+    margin-bottom: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: rgba(255, 255, 226);
+    -webkit-transition: background 1s ease;
+    transition: background 1s ease;
+}
+/* rgba(113,101,88,.9) */
         
 .navbar-brand {
     color: rgb(113, 101, 88);
@@ -57,232 +66,301 @@
 nav .icon-bar {
     background-color: rgb(113, 101, 88);
 }
-       
-        nav ul {
-            background-color: rgba(255, 255, 226);
-            z-index: 99;
-        }
-        
-        nav ul li a {
-            font-size: .9em;
-            font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-            text-transform: uppercase;
-            color: #888;
-        }
-        
-        nav.navbar ul li a:hover {
-            background-color: transparent;
-            color: rgb(33, 153, 163);
-        }
-        
-        .nav_colored {
-            background-color: rgb(255, 255, 226) !important;
-            -webkit-transition: background 1s ease;
-            transition: background 1s ease;
-        }
-        
-        .nav-link_colored {
-            color: rgb(113, 101, 88);
-        }
-        
-        @media screen and (min-width: 40em) {
-            nav.navbar {
-                position: fixed;
-                background-color: transparent;
-            }
+
+nav ul li a {
+    font-size: .9em;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #888;
+}
+  
+nav.navbar ul li a:hover {
+    background-color: transparent;
+    color: rgb(33, 153, 163);
+}
+  
+.nav_colored {
+    background-color: #fffce0 !important;
+    -webkit-transition: background 1s ease;
+    transition: background 1s ease;
+}
+  
+.nav-link_colored {
+    color: rgb(113, 101, 88)!important;
+}
+  
+@media screen and (min-width: 40em) {
+    nav.navbar {
+        position: fixed;
+        background-color: transparent;
+    }
             
-            .navbar-brand {
-                color: #ffffdb;
-            }
+    .navbar-brand {
+        color: #ffffdb;
+    }
  
 
-            nav ul li a {
-                color: #ffffdb;
-            }
-        }
+    nav ul li a {
+        color: #ffffdb;
+    }
+}
+
+/**********************
+       HEADER
+**********************/
+
+header {
+    padding-top: 1px;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url("../img/nous-cool.jpg") center 15% no-repeat;
+    background-size: cover;
+    color: #ffffdb;
+    z-index: 0;
+}
         
-        header {
-            padding-top: 50px;
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            background: url("../img/nous-cool.jpg") center 15% no-repeat;
-            background-size: cover;
-            color: #ffffdb;
-            z-index: 0;
-        }
-        
-        header:after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: '';
-            height: 100%;
-            width: 100%;
-            background-color: rgba(113, 101, 88, .4);
-            z-index: 1;
-        }
-        
-        .header-content {
-            position: relative;
-            padding-left: 3rem;
-            padding-right: 3rem;
-            text-align: center;
-            z-index: 3;
-        }
-        
-        .header-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
-        
-        .header-text {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-        
-        .divider-line {
-            margin: 1.5rem auto;
-            height: 1px;
-            width: 3em;
-            background-color: #ffffdb;
-        }
-        
-        @media screen and (min-width: 64em) {
-            header {
-                background-position: center bottom;
-            }
-            .header-title {
-                font-size: 3.7rem;
-            }
-            .header-text {
-                font-size: 1.4rem;
-            }
-        }
-        
-        section#timing {
-            padding-top: 5rem;
-            padding-bottom: 4rem;
-        }
-        
-        section#timing h2 {
-            margin-bottom: 3.5rem;
-            text-align: center;
-        }
-        
-        section#timing .timing-item {
-            padding-bottom: 2rem;
-            text-align: center;
-        }
-        
-        section#timing h3 {
-            margin-top: 1.5rem;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        
-        section#dress-code {
-            padding: 3rem 2rem;
-            background-color: #2199a3;
-            color: #fff;
-        }
-        
-        section#dress-code h2 {
-            color: #fff;
-        }
-        
-        section#hotels {
-            padding-top: 4rem;
-        }
-        
-        section#hotels .hotel-box {
-            position: relative;
-            margin-top: 2rem;
-            cursor: pointer;
-            z-index: 2;
-        }
-        
-        section#hotels .hotel-overlay:after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "";
-            height: 100%;
-            width: 100%;
-            background-color: rgba(10, 10, 10, .1);
-            opacity: 1;
-            z-index: 3;
-        }
-        
-        section#hotels .hotel-overlay:hover:after {
-            opacity: 0;
-            -webkit-transition: color 400ms ease-in;
-            transition: color 400ms ease-in;
-        }
-        
-        section#form-music {
-            padding: 3rem 2rem;
-            background-color: #2199a3;
-            color: #fff;
-        }
-        
-        section#where {
-            padding: 4rem 1rem;
-        }
-        
-        section#where h2 {
-            margin-bottom: 1.7rem;
-        }
-        
-        section#where h3 {
-            font-size: 1.2rem;
-            font-weight: bolder;
-        }
-        
-        .how-to-come {
-            height: 440px;
-            width: 100%;
-        }
-        
-        section#contact {
-            position: relative;
-            padding: 8rem 1rem;
-            text-align: center;
-            z-index: 0;
-        }
-        
-        .contact-bg {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            background: url(../img/ocean-sm.jpg) no-repeat;
-            background-position: center top;
-            background-size: cover;
-            -webkit-filter: blur(1px);
-            filter: blur(1px);
-            z-index: 1;
-        }
-        
-        .contact-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .contact-content p {
-            font-size: 22px;
-        }
-        
-        .contact-content h2,
-        .contact-content p {
-            color: #444;
-        }
-        
-        @media screen and (min-width: 40em) {
-            .contact-bg {
-                background: url(../img/ocean.jpg) no-repeat;
-                /*background-position: center center;*/
-            }
-        }
+header:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(113, 101, 88, .4);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    top: 40%;
+    -webkit-transform: translateY(-40%);
+    transform: translateY(-40%);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
+    z-index: 3;
+}
+
+.header-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.divider-line {
+    margin: 1.5rem auto;
+    height: 1px;
+    width: 3em;
+    background-color: #ffffdb;
+}
+
+@media screen and (min-width: 64em) {
+    header {
+        background-position: center bottom;
+    }
+    .header-title {
+        font-size: 5rem;
+    }
+    .header-text {
+        font-size: 2rem;
+    }
+}
+
+/**********************
+       TIMING
+**********************/
+
+section#timing {
+/*
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+*/
+}
+
+section#timing h2 {
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+
+section#timing .timing-item {
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+section#timing h3 {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/**********************
+    DRESS-CODE
+**********************/
+section#dress-code {
+/*    padding: 3rem 2rem;*/
+    background-color: #2199a3;
+    color: #fff;
+}
+
+section#dress-code h2 {
+    color: #fff;
+}
+
+
+/**********************
+       HOTELS
+**********************/
+
+section#hotels {
+/*    padding: 4rem 2rem;*/
+}
+
+section#hotels .hotel-box {
+    position: relative;
+    margin-top: 2rem;
+    cursor: pointer;
+    z-index: 2;
+}
+
+section#hotels .hotel-overlay:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: rgba(10, 10, 10, .1);
+    opacity: 1;
+    z-index: 3;
+}
+
+section#hotels .hotel-overlay:hover:after {
+    opacity: 0;
+    -webkit-transition: color 400ms ease-in;
+    transition: color 400ms ease-in;
+}
+
+
+/**********************
+       MUSIC
+**********************/
+
+section#form-music {
+/*    padding: 3rem 2rem;*/
+    background-color: #2199a3;
+    color: #fff;
+}
+
+section#form-music table {
+    margin: 0 auto;
+    width: 90%;
+    text-align: left;
+}
+
+.form-label {
+    padding-right: 3rem;
+    text-align: right;
+}
+
+.form-label label {
+    font-weight: 400;
+}
+
+section#form-music input[type=text] {
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    width: 70%;
+    border: 1px solid transparent;
+    border-radius: .3em; 
+}
+
+section#form-music input[type=submit] {
+    padding: .7rem 2rem;
+    border: 2px solid #fff;
+    border-radius: .3rem;
+    background-color: transparent;
+}
+
+/**********************
+      HOW TO COME
+**********************/
+
+section#where {
+/*    padding: 4rem 1rem;*/
+}
+
+section#where h2 {
+    margin-bottom: 1.7rem;
+}
+
+section#where h3 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.our-map {
+    margin-bottom: 4rem;
+}
+
+.how-to-come {
+    height: 440px;
+    width: 100%;
+}
+
+@media screen and (min-width: 64em) {
+    .our-map {
+        margin-bottom: 0;
+    }
+}
+
+/**********************
+       CONTACT
+**********************/
+
+section#contact {
+    position: relative;
+    padding: 8rem 1rem;
+    text-align: center;
+    z-index: 0;
+}
+
+.contact-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: url(../img/ocean-sm.jpg) no-repeat;
+    background-position: center top;
+    background-size: cover;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    z-index: 1;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-content p {
+    font-size: 22px;
+}
+
+.contact-content h2,
+.contact-content p {
+    color: #444;
+}
+
+@media screen and (min-width: 40em) {
+    .contact-bg {
+        background: url(../img/ocean.jpg) no-repeat;
+        /*background-position: center center;*/
+    }
+}
