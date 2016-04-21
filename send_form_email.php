@@ -29,9 +29,9 @@ function died($error) {
 
   // validation expected data exists
 
-if(!isset($_POST['name']) ||
+if(empty($_POST['name']) ||
 
-   !isset($_POST['song']) ||
+   empty($_POST['song']))
 {
 
     died('Désolé, il y a un petit problème d\'envoi de ce formulaire.');       
@@ -39,43 +39,43 @@ if(!isset($_POST['name']) ||
 }
  
 
-  $name = $_POST['name']; // required
+$name = $_POST['name']; // required
 
-  $song = $_POST['song']; // required
+$song = $_POST['song']; // required
    
+$error_message = "";
 
-  $error_message = "";
 
-
-  $string_exp = "/^[A-Za-z .'-]+$/";
+$string_exp = "/^[A-Za-z .'-]+$/";
 
 if(!preg_match($string_exp,$name)) {
 
-  $error_message .= 'Vous êtes sur que c\'est un prénom correct? <br />';
-
+    $error_message .= 'Vous êtes sur que c\'est un prénom correct? <br />';
 }
 
 if(!preg_match($string_exp,$song)) {
 
-  $error_message .= 'Oooups! La chanson que vous avez mise ne semble pas être correct. <br />';
+    $error_message .= 'Oooups! La chanson que vous avez mise ne semble pas être correct. <br />';
 
 }
 
-  $email_message = "Form details below.\n\n";
+
+
+$email_message = "Form details below.\n\n";
    
 
-  function clean_string($string) {
+function clean_string($string) {
 
     $bad = array("content-type","bcc:","to:","cc:","href");
 
     return str_replace($bad,"",$string);
 
-  }
+}
    
 
-  $email_message .= "Name: ".clean_string($name)."\n";
+$email_message .= "Name: ".clean_string($name)."\n";
 
-  $email_message .= "Song: ".clean_string($song)."\n";
+$email_message .= "Song: ".clean_string($song)."\n";
 
 
 // create email headers
@@ -94,6 +94,7 @@ $headers = 'From: '.$email_from."\r\n".
 <!-- include your own success html here --> 
 
 Merci beaucoup et à bientôt!
+
 
 <?php
 
