@@ -6,14 +6,14 @@ $errorMSG = "";
 if (empty($_POST["name"])) {
     $errorMSG = "Name is required ";
 } else {
-    $name = $_POST["name"];
+    $name = trim(strip_tags($_POST["name"]));
 }
 
-// EMAIL
+// SONG
 if (empty($_POST["song"])) {
     $errorMSG .= "Song is required ";
 } else {
-    $song = $_POST["song"];
+    $song = trim(strip_tags($_POST["song"]));
 }
 
 
