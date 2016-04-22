@@ -34,7 +34,8 @@ function submitForm(){
 
 function formSuccess(){
     $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!")
+    submitMSG(true, "Message Submitted!");
+    setTimeout(submitMSG(true, ""), 2000);
 }
 
 function formError(){
