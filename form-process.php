@@ -12,7 +12,7 @@ if (empty($_POST["name"]) || !preg_match("/^[A-Za-z .'-]+$/", $_POST['name'])) {
     $name = trim(strip_tags($_POST["name"]));
 }
 
-// EMAIL
+// SONG
 if (empty($_POST["song"]) || !preg_match("/^[A-Za-z0-9 .'-]+$/", $_POST['song'])) { // || preg_match($string_exp, $_POST['song'])
     $errorMSG .= "Il me semble pas que c'est une bonne chanson :(";
 } else {
