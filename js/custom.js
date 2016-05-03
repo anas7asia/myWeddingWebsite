@@ -15,3 +15,14 @@ $(document).ready(function($){
         }
     });
 });
+
+//custom smoothscroll
+function scrollNav() {
+  $('.nav a').click(function(){  
+    $('html, body').stop().animate({
+        scrollTop: $( $(this).attr('href') ).offset().top - 30
+    }, 600);
+    return false;
+  });
+}
+scrollNav();

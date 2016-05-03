@@ -16,7 +16,7 @@ body {
 }
         
 .page-section {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     text-align: center;
 }
         
@@ -57,7 +57,6 @@ nav.navbar {
     width: 100%;
     z-index: 9;
     background-color: rgba(255, 255, 226);
-    -webkit-transition: background 1s ease;
     transition: background 1s ease;
 }
 /* rgba(113,101,88,.9) */
@@ -71,20 +70,19 @@ nav .icon-bar {
 }
 
 nav ul li a {
-    font-size: .9em;
+    font-size: .7em;
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     color: #888;
 }
-  
+ 
 nav.navbar ul li a:hover {
-    background-color: transparent;
+    background-color: transparent!important;
     color: rgb(33, 153, 163);
 }
   
 .nav_colored {
     background-color: rgb(255,255,245) !important;
-    -webkit-transition: background 1s ease;
     transition: background 1s ease;
 }
   
@@ -96,6 +94,7 @@ nav.navbar ul li a:hover {
     color: rgb(33, 153, 163) !important;
 }
   
+
 @media screen and (min-width: 768px) {
     nav.navbar {
         position: fixed;
@@ -106,12 +105,33 @@ nav.navbar ul li a:hover {
         color: #ffffdb;
     }
  
-
     nav ul li a {
+        background-color: transparent;
         color: #ffffdb;
     }
+
+    .nav>li>a {
+        padding: 10px;
+        line-height: 30px;
+    }
+
+    .nav>li>a:hover, 
+    .nav>li>a:focus {
+        text-decoration: none;
+        background-color: transparent;
+        color: #ffffdb;
+    }
+
 }
 
+@media screen and (min-width: 992px) {
+    nav ul li a {
+        font-size: .9em;
+    } 
+    .nav>li>a {
+        padding: 10px 15px;
+    }
+}  
 /**********************
        HEADER
 **********************/
@@ -121,7 +141,9 @@ header {
     position: relative;
     height: 100vh;
     width: 100%;
-    background: url("../img/nous-cool.jpg") center 15% no-repeat;
+    background-image: url("../img/nous-cool.jpg");
+    background-position: center 15%;
+    background-repeat: no-repeat;
     background-size: cover;
     color: #ffffdb;
     z-index: 0;
@@ -150,18 +172,20 @@ header:after {
 }
 
 .header-title {
+    margin-bottom: 0;
     font-family: 'Dancing Script', cursive;
     font-size: 3em;
     font-weight: 700;
 }
 
 .header-text {
+    margin-top: 0;
     font-size: 1.2em;
     font-weight: 400;
 }
 
 .divider-line {
-    margin: 1.5rem auto;
+    margin: 1.7rem auto;
     height: 1px;
     width: 3em;
     background-color: #ffffdb;
@@ -199,67 +223,69 @@ section#timing h3 {
     font-weight: bold;
 }
 
+
 /**********************
-    DRESS-CODE
+       INFO
 **********************/
-section#dress-code {
-    background-color: #2199a3;
+
+section#info {  
+    background-color: #68C39C;
     color: #fff;
 }
 
-section#dress-code h2 {
-    color: #fff;
+.info-box {
+    margin: 1.5em auto;
+    width: 128px;
+    height: 128px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transition: all 500ms ease;
 }
 
-
-/**********************
-       HOTELS
-**********************/
-
-section#hotels .hotel-box {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 2rem;
-    width: 70%;
-    cursor: pointer;
-    z-index: 2;
+.info-dress {
+    background: url('../img/dress-white.png') center center no-repeat;
+    background-size: 70px;
 }
 
-section#hotels .hotel-overlay:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    height: 100%;
-    width: 100%;
-    background-color: rgba(10, 10, 10, .1);
-    opacity: 1;
-    z-index: 3;
+.info-swim {
+    background: url('../img/pool-white.png') center center no-repeat;
+    background-size: 70px;
 }
 
-section#hotels .hotel-overlay:hover:after {
-    opacity: 0;
-    -webkit-transition: color 400ms ease-in;
-    transition: color 400ms ease-in;
+.info-house {
+    background: url('../img/house-white.png') center center no-repeat;
+    background-size: 70px;
 }
 
+.info-dress:hover {
+    background-color: #fff;
+    background-image: url('../img/dress-green.png');
+}
+
+.info-swim:hover  {
+    background-color: #fff;
+    background-image: url('../img/pool-green.png');
+} 
+
+.info-house:hover {
+    background-color: #fff;
+    background-image: url('../img/house-green.png');
+}
 
 @media screen and (min-width: 768px) {
-    section#hotels .hotel-box {
-        width: 100%;
-    }
+    
 }
 
 /**********************
        MUSIC
 **********************/
 
-#section-form-music {
+#music {
     background-color: #2199a3;
     color: #fff;
 }
 
-#section-form-music table {
+#music table {
     margin: 0 auto;
     width: 90%;
     text-align: left;
@@ -271,16 +297,23 @@ section#hotels .hotel-overlay:hover:after {
 }
 
 .form-label label {
-    font-weight: 400;
+    font-weight: 600;
 }
 
-#section-form-music input[type=text] {
+#music input[type=text] {
     margin-bottom: 1rem;
-    padding: 1rem 1.5rem;
+    padding: 1.3rem 1.5rem;
     width: 90%;
-    border: 1px solid transparent;
+    border: 2px solid #fff;
     border-radius: .3em; 
     color: #222;
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+    color: #dedede;
 }
 
 #form-submit {
@@ -288,33 +321,42 @@ section#hotels .hotel-overlay:hover:after {
     position: relative;
     padding: 1rem 2rem;
     border: 2px solid #fff;
-    border-radius: .3rem;
+    border-radius: .5rem;
     line-height: 1;
     background-color: transparent;
-    -webkit-transition: all 0.3s;
-            transition: all 0.3s;
-    cursor:pointer;    
-    z-index: 0; 
+    color: #fff;
+    transition: all 0.3s;
+    cursor:pointer;     
 }
 
 #form-submit:active,
 #form-submit:hover {
+    border-color: #fff;
     background-color: #fff;
     color: #2199a3;
 }
 
 @media screen and (min-width: 768px) {
-    #section-form-music input[type=text] {
+    #music input[type=text] {
         width: 60%;
     }
 }
+
+/**********************
+      WEDDING LIST
+**********************/
+#wedding-list {
+    /*background-color: #68C39C;
+    color: #fff;*/
+}
+
 /**********************
       HOW TO COME
 **********************/
 
-
 section#where h2 {
     margin-bottom: 1.7rem;
+
 }
 
 section#where h3 {
@@ -383,9 +425,12 @@ section#contact {
     color: #444;
 }
 
+.contact-email {
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 768px) {
     .contact-bg {
         background: url(../img/ocean.jpg) no-repeat;
-        /*background-position: center center;*/
     }
-}
+}}
