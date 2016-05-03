@@ -257,6 +257,11 @@ section#info {
     background-size: 70px;
 }
 
+.info-car {
+    background: url('../img/car-white.png') center center no-repeat;
+    background-size: 90px;
+}
+
 .info-dress:hover {
     background-color: #fff;
     background-image: url('../img/dress-green.png');
@@ -270,6 +275,11 @@ section#info {
 .info-house:hover {
     background-color: #fff;
     background-image: url('../img/house-green.png');
+}
+
+.info-car:hover {
+    background-color: #fff;
+    background-image: url('../img/car-green.png');
 }
 
 @media screen and (min-width: 768px) {
@@ -287,12 +297,13 @@ section#info {
 
 #music table {
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     text-align: left;
 }
 
 .form-label {
     padding-right: 3rem;
+    width: 30%;
     text-align: right;
 }
 
@@ -303,7 +314,7 @@ section#info {
 #music input[type=text] {
     margin-bottom: 1rem;
     padding: 1.3rem 1.5rem;
-    width: 90%;
+    width: 100%;
     border: 2px solid #fff;
     border-radius: .3em; 
     color: #222;
@@ -314,6 +325,11 @@ section#info {
 ::-moz-placeholder,
 :-ms-input-placeholder {
     color: #dedede;
+}
+
+#msgSubmit {
+    width: 100%;
+    word-break: break-all;
 }
 
 #form-submit {
@@ -337,18 +353,12 @@ section#info {
 }
 
 @media screen and (min-width: 768px) {
-    #music input[type=text] {
-        width: 60%;
+
+    #music table {
+        width: 50%;
     }
 }
 
-/**********************
-      WEDDING LIST
-**********************/
-#wedding-list {
-    /*background-color: #68C39C;
-    color: #fff;*/
-}
 
 /**********************
       HOW TO COME
@@ -370,7 +380,7 @@ section#where h3 {
 
 .how-to-come {
     padding: 1rem 3rem;
-    height: 440px;
+    height: auto;
     width: 100%;
     text-align: left;
 }
@@ -383,6 +393,22 @@ section#where h3 {
 @media screen and (min-width: 768px) {
     .our-map {
         margin-bottom: 0;
+    }
+    .how-to-come {
+        overflow: auto;
+        min-height: 440px;
+    }
+    .where-text {
+        height: 70%;
+    }
+
+    .where-img {
+        width: 100%;
+        min-height: 130px;
+        height: 30%;
+        border-radius: 4px;
+        background: url(../img/bwhotel.jpg) center center no-repeat;
+        background-size: cover;
     }
 }
 

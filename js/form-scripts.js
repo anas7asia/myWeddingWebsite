@@ -2,7 +2,7 @@ $("#contactForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         formError();
-        submitMSG(false, "Vous avez rempli le formulaire correctement?");
+        submitMSG(false, "Nous savons que le formulaire est compliqué, mais encore un petit effort, il nous faut au moins votre prénom et le titre de la chanson!");
     } else {
         // everything looks good!
         event.preventDefault();
@@ -15,7 +15,6 @@ function submitForm(){
     // Initiate Variables With Form Content
     var name = $("#name").val();
     var song = $("#song").val();
-    //var message = $("#message").val();
 
     $.ajax({
         type: "POST",
@@ -34,7 +33,7 @@ function submitForm(){
 
 function formSuccess(){
     $("#contactForm")[0].reset();
-    submitMSG(true, "Message Submitted!");
+    submitMSG(true, "C'est noté !");
     setTimeout(function(){submitMSG(true, "");}, 4000);
 }
 
@@ -46,9 +45,9 @@ function formError(){
 
 function submitMSG(valid, msg){
     if(valid){
-        var msgClasses = "h3 text-center tada animated text-success";
+        var msgClasses = "tada animated text-success";
     } else {
-        var msgClasses = "h3 text-center text-danger";
+        var msgClasses = "text-danger";
     }
     $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
 }
