@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariage N&amp;T</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
     <link rel="stylesheet" href="css/animate.css">
     <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
@@ -46,7 +46,9 @@
         <!-- /.container-fluid -->
     </nav>
 
+    <!-- HEADER -->
     <header>
+        <!-- content is grouped to a div in order to use overlay and therefore z-index -->
         <div class="header-content">
             <h1 class="header-title">Mariage de Nastia &amp; Thibaud</h1>
             <div class="divider-line"></div>
@@ -54,6 +56,7 @@
         </div>
     </header>
 
+    <!-- PROGRAMME -->
     <section id="timing" class="page-section">
         <h2>Le programme du week-end</h2>
         <div class="container">
@@ -93,12 +96,15 @@
             </div>
         </div>
     </section>
+    <!-- END OF PROGRAMME -->
 
+    <!-- MUSIC FORM -->
     <section id="music" class="page-section">
         <h2>Whaa c'est ma chanson!</h2>
         <p>Soumettez-nous votre chanson préférée et elle passera pendant la soirée, c'est promis!</p>
 
-        <form role="form" id="contactForm" data-toggle="validator" class="shake">
+        <!-- empty class="" should be kept for proper animation shake effect when the form is not valid -->
+        <form role="form" id="contactForm" data-toggle="validator" class="">
             <table>
                 <tr>
                     <td class="form-label"><label for="name" class="h4">Votre prénom</label></td>
@@ -123,53 +129,20 @@
             </table>
         </form>
     </section>
+    <!-- END OF MUSIC FORM -->
 
+    <!-- COMMENT VENIR -->
     <section id="where" class="page-section">
         <h2>Comment venir ?</h2>
         <p>Un lieu unique pour tout un week-end de festivités !</p>
         <div class="container">
             <div class="row">
 
+            <!-- embedded Google map -->
                 <div class="col-xs-12 col-sm-8 columns">
-
                     <div class="our-map">
-                        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-                        <div style='overflow:hidden;height:440px;width:100%;'>
-                            <div id='gmap_canvas' style='height:440px;100%;'></div>
-                            <div><small><a href="http://embedgooglemaps.com">									embed google maps							</a></small></div>
-                            <div><small><a href="http://freedirectorysubmissionsites.com/">free web directories</a></small></div>
-                            <style>
-                                #gmap_canvas img {
-                                    max-width: none!important;
-                                    background: none!important
-                                }
-                            </style>
-                        </div>
-
-                        <script type='text/javascript'>
-                            function init_map() {
-                                var myOptions = {
-                                    zoom: 10
-                                    , center: new google.maps.LatLng(44.988658090997895, -1.074371708984354)
-                                    , mapTypeId: google.maps.MapTypeId.ROADMAP
-                                };
-                                map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-                                marker = new google.maps.Marker({
-                                    map: map
-                                    , position: new google.maps.LatLng(44.988658090997895, -1.074371708984354)
-                                });
-                                infowindow = new google.maps.InfoWindow({
-                                    content: '<strong>Best Weekend Hotel</strong><br>Best Western, Lacanau<br>'
-                                });
-                                google.maps.event.addListener(marker, 'click', function () {
-                                    infowindow.open(map, marker);
-                                });
-                                infowindow.open(map, marker);
-                            }
-                            google.maps.event.addDomListener(window, 'load', init_map);
-                        </script>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11284.754170625623!2d-1.171821!3d45.000793!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4960c310fa3f333e!2sBest+Western+Golf+H%C3%B4tel+Lacanau!5e0!3m2!1sfr!2sfr!4v1462352132481" width="100%" height="440" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
-
                 </div>
 
                 <div class="col-xs-12 col-sm-4 columns">
@@ -184,18 +157,19 @@
 
                             <p>05 56 03 92 92</p>
 
-                            <p><a href="https://g.co/kgs/u5R2N">Best Western Hotel Lacanau</a></p>
+                            <!-- custom hidden-md is used because not enough place for 4 items -->
+                            <p class="where-link"><a href="http://www.golf-hotel-lacanau.fr/" target="_blank" rel="nofollow noopener">Best Western Hotel Lacanau</a></p>
                         </div>
 
                         <div class="where-img"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
+                    </div> <!-- end of .how-to-come -->
+                </div> <!-- end of .col -->
+            </div><!-- end of .row -->
+        </div><!-- end of .container -->
     </section>
+    <!-- END OF COMMENT VENIR -->
 
+    <!-- INFO -->
     <section id="info" class="page-section">
         <h2>Infos pratiques</h2>
         <div class="container">
@@ -230,23 +204,27 @@
                     <h3>Parking</h3>
                     <p>Un parking est à disposition sur place juste devant l'hôtel. Il y aura de la place pour tout le monde!</p>
                 </div>
-                
-
-            </div>
-        </div>
+            </div> <!-- end of .row -->
+        </div> <!-- end of .container -->
     </section>
+    <!-- END OF INFO -->
 
     
-
+    <!-- LISTE DE MARIAGE -->
     <section id="wedding-list" class="page-section">
     	<h2>Liste de mariage</h2>
     	<p>Il n'y en a pas… mais nous avons pour projet de faire un beau voyage! <br> Une petite tirelire sera à disposition le jour du mariage.</p>
     </section>
+    <!-- END OF LISTE DE MARIAGE -->
 
     
-
+    <!-- CONTACTS -->
     <section id="contact">
+
+        <!-- overlay -->
         <div class="contact-bg"></div>
+
+        <!-- grouped to use z-index with overlay -->
         <div class="contact-content">
             <h2>Nous contacter</h2>
             <p>Nastia &amp; Thibaud<br>
@@ -256,8 +234,9 @@
             contactez Laura Oudin :<br>
             <span class="contact-email">laura.oudin7@gmail.com</span></p>
         </div>
-
+        
     </section>
+    <!-- END OF CONTACTS -->
 
 
     <script src="js/jquery-1.11.2.min.js"></script>

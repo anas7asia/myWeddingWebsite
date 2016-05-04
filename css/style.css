@@ -1,18 +1,11 @@
 /**********************
     GENERAL STYLES
 **********************/
-
-@font-face {
-    font-family: 'Helvetica Neue UltraLight';
-        src: url('../fonts/HelveticaNeue-UltraLight.eot');
-        src: local('☺'), url('../fonts/HelveticaNeue-UltraLight.woff') format('woff'), url('../fonts/HelveticaNeue-UltraLight.ttf') format('truetype'), url('../fonts/HelveticaNeue-UltraLight.svg') format('svg');
-    font-weight: normal;
-    font-style: normal;
-        }
         
 body {
-    font-size: 16px;
+    font-size: 16px; /*initial size*/
     background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
 }
         
 .page-section {
@@ -148,7 +141,8 @@ header {
     color: #ffffdb;
     z-index: 0;
 }
-        
+
+/*semi-transparent overlay*/    
 header:after {
     position: absolute;
     top: 0;
@@ -225,68 +219,6 @@ section#timing h3 {
 
 
 /**********************
-       INFO
-**********************/
-
-section#info {  
-    background-color: #68C39C;
-    color: #fff;
-}
-
-.info-box {
-    margin: 1.5em auto;
-    width: 128px;
-    height: 128px;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    transition: all 500ms ease;
-}
-
-.info-dress {
-    background: url('../img/dress-white.png') center center no-repeat;
-    background-size: 70px;
-}
-
-.info-swim {
-    background: url('../img/pool-white.png') center center no-repeat;
-    background-size: 70px;
-}
-
-.info-house {
-    background: url('../img/house-white.png') center center no-repeat;
-    background-size: 70px;
-}
-
-.info-car {
-    background: url('../img/car-white.png') center center no-repeat;
-    background-size: 90px;
-}
-
-.info-dress:hover {
-    background-color: #fff;
-    background-image: url('../img/dress-green.png');
-}
-
-.info-swim:hover  {
-    background-color: #fff;
-    background-image: url('../img/pool-green.png');
-} 
-
-.info-house:hover {
-    background-color: #fff;
-    background-image: url('../img/house-green.png');
-}
-
-.info-car:hover {
-    background-color: #fff;
-    background-image: url('../img/car-green.png');
-}
-
-@media screen and (min-width: 768px) {
-    
-}
-
-/**********************
        MUSIC
 **********************/
 
@@ -359,7 +291,6 @@ section#info {
     }
 }
 
-
 /**********************
       HOW TO COME
 **********************/
@@ -391,25 +322,104 @@ section#where h3 {
 }
 
 @media screen and (min-width: 768px) {
+    section#where {
+        padding: 6rem 1rem;
+    }
+    .how-to-come {
+        height: 440px;
+    }
+}
+
+@media screen and (min-width: 992px) {
     .our-map {
         margin-bottom: 0;
     }
     .how-to-come {
         overflow: auto;
-        min-height: 440px;
+        height: 440px;
     }
     .where-text {
-        height: 70%;
+        height: 55%;
     }
 
     .where-img {
         width: 100%;
-        min-height: 130px;
-        height: 30%;
+        height: 38%;
         border-radius: 4px;
         background: url(../img/bwhotel.jpg) center center no-repeat;
         background-size: cover;
     }
+    .where-link {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .where-link {
+        display: initial;
+    }
+}
+
+/**********************
+       INFO
+**********************/
+
+section#info {  
+    background-color: #68C39C;
+    color: #fff;
+}
+
+.info-box {
+    margin: 1.5em auto;
+    width: 128px;
+    height: 128px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transition: all 500ms ease;
+}
+
+.info-dress {
+    background: url('../img/dress-white.png') center center no-repeat;
+    background-size: 70px;
+}
+
+.info-swim {
+    background: url('../img/pool-white.png') center center no-repeat;
+    background-size: 70px;
+}
+
+.info-house {
+    background: url('../img/house-white.png') center center no-repeat;
+    background-size: 70px;
+}
+
+.info-car {
+    background: url('../img/car-white.png') center center no-repeat;
+    background-size: 90px;
+}
+
+.info-dress:hover {
+    background-color: #fff;
+    background-image: url('../img/dress-green.png');
+}
+
+.info-swim:hover  {
+    background-color: #fff;
+    background-image: url('../img/pool-green.png');
+} 
+
+.info-house:hover {
+    background-color: #fff;
+    background-image: url('../img/house-green.png');
+}
+
+.info-car:hover {
+    background-color: #fff;
+    background-image: url('../img/car-green.png');
+}
+
+@media screen and (min-width: 768px) {
+    
 }
 
 /**********************
@@ -455,8 +465,6 @@ section#contact {
     text-decoration: underline;
 }
 
-@media screen and (min-width: 768px) {
-    .contact-bg {
-        background: url(../img/ocean.jpg) no-repeat;
-    }
-}}
+.contact-bg {
+    background: url(../img/ocean.jpg) no-repeat;
+}
