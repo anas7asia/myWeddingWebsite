@@ -1,18 +1,18 @@
 /**********************
     GENERAL STYLES
 **********************/
-        
+
 body {
     font-size: 16px; /*initial size*/
     background-color: #fff;
     font-family: Arial, Helvetica, sans-serif;
 }
-        
+
 .page-section {
     padding: 6rem 2rem;
     text-align: center;
 }
-        
+
 h2 {
     margin-top: 0;
     margin-bottom: 1.2rem;
@@ -20,7 +20,7 @@ h2 {
     font-size: 2em;
     font-weight: 400;
 }
-        
+
 h2:before,
 h2:after {
     vertical-align: 10%;
@@ -28,11 +28,11 @@ h2:after {
     max-width: 5px;
     content: '~';
 }
-        
+
 h2:before {
     margin-right: .7rem;
 }
-        
+
 h2:after {
     margin-left: .7rem;
 }
@@ -44,7 +44,7 @@ h3{
 /**********************
     NAVBAR
 **********************/
-        
+
 nav.navbar {
     margin-bottom: 0;
     width: 100%;
@@ -53,7 +53,7 @@ nav.navbar {
     transition: background 1s ease;
 }
 /* rgba(113,101,88,.9) */
-        
+
 .navbar-brand {
     color: rgb(113, 101, 88);
 }
@@ -68,17 +68,17 @@ nav ul li a {
     text-transform: uppercase;
     color: #888;
 }
- 
+
 nav.navbar ul li a:hover {
     background-color: transparent!important;
     color: rgb(33, 153, 163);
 }
-  
+
 .nav_colored {
     background-color: rgb(255,255,245) !important;
     transition: background 1s ease;
 }
-  
+
 .nav-link_colored {
     color: rgb(113, 101, 88)!important;
 }
@@ -86,18 +86,18 @@ nav.navbar ul li a:hover {
 .nav-link_colored:hover {
     color: rgb(33, 153, 163) !important;
 }
-  
+
 
 @media screen and (min-width: 768px) {
     nav.navbar {
         position: fixed;
         background-color: transparent;
     }
-            
+
     .navbar-brand {
         color: #ffffdb;
     }
- 
+
     nav ul li a {
         background-color: transparent;
         color: #ffffdb;
@@ -108,7 +108,7 @@ nav.navbar ul li a:hover {
         line-height: 30px;
     }
 
-    .nav>li>a:hover, 
+    .nav>li>a:hover,
     .nav>li>a:focus {
         text-decoration: none;
         background-color: transparent;
@@ -120,11 +120,11 @@ nav.navbar ul li a:hover {
 @media screen and (min-width: 992px) {
     nav ul li a {
         font-size: .9em;
-    } 
+    }
     .nav>li>a {
         padding: 10px 15px;
     }
-}  
+}
 /**********************
        HEADER
 **********************/
@@ -142,7 +142,7 @@ header {
     z-index: 0;
 }
 
-/*semi-transparent overlay*/    
+/*semi-transparent overlay*/
 header:after {
     position: absolute;
     top: 0;
@@ -245,10 +245,10 @@ section#timing h3 {
 
 #music input[type=text] {
     margin-bottom: 1rem;
-    padding: 1.3rem 1.5rem;
+    /*padding: 1.3rem 1.5rem;*/
     width: 100%;
     border: 2px solid #fff;
-    border-radius: .3em; 
+    border-radius: .3em;
     color: #222;
 }
 
@@ -274,7 +274,7 @@ section#timing h3 {
     background-color: transparent;
     color: #fff;
     transition: all 0.3s;
-    cursor:pointer;     
+    cursor:pointer;
 }
 
 #form-submit:active,
@@ -364,7 +364,7 @@ section#where h3 {
        INFO
 **********************/
 
-section#info {  
+section#info {
     background-color: #68C39C;
     color: #fff;
 }
@@ -406,7 +406,7 @@ section#info {
 .info-swim:hover  {
     background-color: #fff;
     background-image: url('../img/pool-green.png');
-} 
+}
 
 .info-house:hover {
     background-color: #fff;
@@ -419,7 +419,7 @@ section#info {
 }
 
 @media screen and (min-width: 768px) {
-    
+
 }
 
 /**********************
